@@ -1,0 +1,39 @@
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-image{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+img{
+  width: 100%;
+  position: relative;
+}
+
+.icon-up{
+  position: absolute;
+  top: 0;
+  right: 50%;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.icon-down{
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
