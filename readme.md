@@ -11,3 +11,4 @@
   - creiamo un variabile currentSrc dove inseriremo dentro mano mano che il ciclo va avanti le immagini
   - creiamo la variabile htmlString che stampera nell'html dentro le immagini dove metteremo il tag img dove dentro source mettiamo currentSource
   - la variabile htmlString la sommiamo al contDomElement
+  - aggiungiamo al conDomElement la classe d-none che sara display none
