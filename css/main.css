@@ -15,8 +15,8 @@
   flex-wrap: wrap;
 }
 
-img{
-  width: 100%;
+.myimage{
+  width: 200px;
   position: relative;
 }
 
@@ -43,4 +43,8 @@ img{
 
 .d-none{
   display: none;
+}
+
+.d-block{
+  display: block;
 }

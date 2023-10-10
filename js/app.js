@@ -17,13 +17,17 @@ for(let i = 0; i < lengthImage; i++){
   console.log(currentSrc);
 
   const htmlString = `
-    <img src="${currentSrc}">
-    <span><i class="fa-solid fa-arrow-up icon-up"></i></span>
-    <span><i class="fa-solid fa-arrow-down icon-down"></i></span>
+    <img class='myimage d-none' src="${currentSrc}">
+    <span class="click-btn"><i class="fa-solid fa-arrow-up icon-up"></i></span>
+    <span class="click-btn"><i class="fa-solid fa-arrow-down icon-down"></i></span>
   `;
   console.log(htmlString);
 
   contDomElement.innerHTML += htmlString;
-  contDomElement.classList.add(' d-none');
+
+
 }
 
+const firstImage = document.querySelector('.myimage');
+console.log(firstImage);
+firstImage.className += ' d-block';
