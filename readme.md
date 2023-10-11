@@ -14,3 +14,19 @@
   - aggiungiamo alla classe myimage che si trova dentro il tag img la classe d-none che sara display none
 - creiamo la variabile firstimage che ci predniamo con il queryselector
 - e gli aggiungiamo la classe d-block
+
+
+- ci creiamo due variabili per le freccie e le prendiamo col query.selector
+- facciamo dua eventlistener click per le due freccie
+  - freccia in alto
+    - SE currentindex e minore di lengthImage - 1
+      - currentindex++
+      - SE currentindex > currentindex - 1
+        - leviamo la classe active a item[currentindex - 1]
+        - aggiungiamo la classe active a item[currentindex]
+    - freccia in basso
+      - SE currentIndex > 0 
+        - currentindex--
+        - SE currentindex < currentindex + 1
+          - leviamo la classe active a item[currentindex + 1]
+          - aggiugiamo la classe active a item[currentindex]

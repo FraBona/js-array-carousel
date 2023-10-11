@@ -6,7 +6,7 @@ const contImage = [
   './img/05.webp',
 ]
 
-const contDomElement = document.querySelector('.cont-image');
+const contDomElement = document.querySelector('.sliders');
 console.log(contDomElement);
 console.log(contImage);
 
@@ -18,8 +18,6 @@ for(let i = 0; i < lengthImage; i++){
 
   const htmlString = `
     <img class='myimage' src="${currentSrc}">
-    <span class="click-btn"><i class="fa-solid fa-arrow-up icon-up"></i></span>
-    <span class="click-btn"><i class="fa-solid fa-arrow-down icon-down"></i></span>
   `;
   console.log(htmlString);
 
@@ -33,14 +31,26 @@ console.log(item);
 let currentIndex = 0;
 item[currentIndex].classList.add('active');
 
-const iconUp = document.querySelector('.click-btn');
-const iconDown = document.querySelector('.click-btn');
+const iconUp = document.querySelector('.click-up');
+const iconDown = document.querySelector('.click-down');
 console.log(iconUp, iconDown);
 
 iconUp.addEventListener('click', function(){
-  console.log('ho schiacchiato la freccia in basso');
+  if(currentIndex < (lengthImage - 1)){
+    currentIndex++;
+    if(currentIndex > (currentIndex - 1)){
+      item[currentIndex - 1].classList.remove('active');
+      item[currentIndex].classList.add('active');
+    }
+  }
 })
 
-iconUp.addEventListener('click', function(){
-  console.log('ho schiacchiato la freccia in basso');
+iconDown.addEventListener('click', function(){
+  if(currentIndex > 0){
+    currentIndex--;
+    if(currentIndex < (currentIndex + 1)){
+      item[currentIndex + 1].classList.remove('active');
+      item[currentIndex].classList.add('active');
+    }
+  }
 })
