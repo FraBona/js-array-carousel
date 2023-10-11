@@ -17,7 +17,7 @@ for(let i = 0; i < lengthImage; i++){
   console.log(currentSrc);
 
   const htmlString = `
-    <img class='myimage d-none' src="${currentSrc}">
+    <img class='myimage' src="${currentSrc}">
     <span class="click-btn"><i class="fa-solid fa-arrow-up icon-up"></i></span>
     <span class="click-btn"><i class="fa-solid fa-arrow-down icon-down"></i></span>
   `;
@@ -25,9 +25,22 @@ for(let i = 0; i < lengthImage; i++){
 
   contDomElement.innerHTML += htmlString;
 
-
 }
 
-const firstImage = document.querySelector('.myimage');
-console.log(firstImage);
-firstImage.className += ' d-block';
+const item = document.querySelectorAll('.myimage');
+console.log(item);
+
+let currentIndex = 0;
+item[currentIndex].classList.add('active');
+
+const iconUp = document.querySelector('.click-btn');
+const iconDown = document.querySelector('.click-btn');
+console.log(iconUp, iconDown);
+
+iconUp.addEventListener('click', function(){
+  console.log('ho schiacchiato la freccia in basso');
+})
+
+iconUp.addEventListener('click', function(){
+  console.log('ho schiacchiato la freccia in basso');
+})

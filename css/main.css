@@ -16,8 +16,11 @@
 }
 
 .myimage{
-  width: 200px;
+  width: 100%;
+  aspect-ratio: 21/9;
   position: relative;
+  object-fit: cover;
+  display: none;
 }
 
 .icon-up{
@@ -40,11 +43,6 @@
   background-color: white;
 }
 
-
-.d-none{
-  display: none;
-}
-
-.d-block{
+.active{
   display: block;
 }
